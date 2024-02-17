@@ -1,22 +1,14 @@
 #include <print>
 
-#include "Display.hpp"
-#include "Memory.hpp"
-#include "Registers.hpp"
-
-void run_program()
-{
-	Chip8::Memory const memory{4'096};
-	Chip8::Registers const registers;
-	Chip8::Display const display;
-}
+#include "Emulator.hpp"
 
 auto main() -> int
 {
 	try {
 		std::println("Hello, CHIP-8!");
 
-		run_program();
+		Chip8::Emulator emulator;
+		emulator.execute();
 	} catch (std::exception& e) {
 		return EXIT_FAILURE;
 	}

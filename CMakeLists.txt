@@ -11,6 +11,8 @@ add_executable(chip_8
         src/Registers.cpp
         src/Display.cpp
         src/Display.hpp
-        src/Display.cpp)
+        src/Display.cpp
+        src/Emulator.cpp
+        src/Emulator.hpp)
 
 target_include_directories(chip_8 PRIVATE external)

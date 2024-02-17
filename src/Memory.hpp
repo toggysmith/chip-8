@@ -5,7 +5,6 @@
 #include <bitset>
 #include <cstddef>
 #include <stack>
-#include <vector>
 
 #include <types.hpp>
 
@@ -16,10 +15,10 @@ namespace Chip8
 	class Memory
 	{
 	    public:
-		explicit Memory(u64 memory_size_in_bytes);
+		Memory();
 
 	    private:
-		std::vector<std::byte> memory_;
+		std::array<std::byte, memory_size_in_bytes> memory_;
 		std::stack<std::bitset<word_size_in_bits>> stack_;
 	};
 }// namespace Chip8
