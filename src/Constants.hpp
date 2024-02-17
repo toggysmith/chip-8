@@ -5,7 +5,9 @@
 
 namespace Chip8
 {
-	constexpr u16 word_size_in_bits{16};
-}
+	u16 constexpr word_size_in_bits{16};
+	u16 constexpr display_width{64};
+	u16 constexpr display_height{32};
+}// namespace Chip8
 
 #endif
