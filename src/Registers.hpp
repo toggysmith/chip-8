@@ -11,10 +11,13 @@ namespace Chip8
 	class Registers
 	{
 	    public:
+		[[nodiscard]] auto program_counter() const -> Word const&;
+		void increment_program_counter_to_next_word();
+
 	    private:
 		// special registers:
-		std::bitset<word_size_in_bits> program_counter_{};
-		std::bitset<word_size_in_bits> index_register_{};
+		Word program_counter_{};
+		Word index_register_{};
 		std::byte delay_time_{};
 		std::byte sound_timer_{};
 		// general purpose registers:

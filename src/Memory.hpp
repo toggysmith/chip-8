@@ -16,10 +16,12 @@ namespace Chip8
 	{
 	    public:
 		Memory();
+		[[nodiscard]] auto read_word_at_address(Word const&) const
+			-> Word;
 
 	    private:
-		std::array<std::byte, memory_size_in_bytes> memory_;
-		std::stack<std::bitset<word_size_in_bits>> stack_;
+		std::array<std::byte, memory_size_in_bytes> memory_{};
+		std::stack<Word> stack_{};
 	};
 }// namespace Chip8
 
