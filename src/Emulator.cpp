@@ -31,6 +31,7 @@ auto Chip8::Emulator::fetch_instruction() -> Word
 	Word const& instruction_address{registers_.program_counter()};
 	Word const& instruction_in_binary{
 		memory_.read_word_at_address(instruction_address)};
+	registers_.increment_program_counter_to_next_word();
 
 	return instruction_in_binary;
 }

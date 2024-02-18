@@ -1,7 +1,5 @@
 #include "Memory.hpp"
 
-Chip8::Memory::Memory() = default;
-
 auto Chip8::Memory::read_word_at_address(const Chip8::Word& address) const
 	-> Chip8::Word
 {
