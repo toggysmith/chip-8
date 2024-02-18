@@ -13,6 +13,4 @@ auto main() -> int
 	} catch (std::exception& e) {
 		return EXIT_FAILURE;
 	}
-
-	return EXIT_SUCCESS;
 }
