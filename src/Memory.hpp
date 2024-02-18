@@ -12,13 +12,17 @@
 
 namespace Chip8
 {
-	/// @brief Facilitate the storage and access of data in memory and on a stack.
+	/**
+	 * @brief Facilitate the storage and access of data in memory and on a stack.
+	 */
 	class Memory
 	{
 	    public:
-		/// @brief Get the word (2-bytes) at a given address in memory.
-		/// @param address The starting address, in binary, of the word.
-		/// @return The word at the address.
+		/**
+		 * @brief Get the word (2-bytes) at a given address in memory.
+		 * @param address The starting address, in binary, of the word.
+		 * @return The word at the address.
+		 */
 		[[nodiscard]] auto
 		read_word_at_address(Word const& address) const -> Word;
 

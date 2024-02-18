@@ -1,5 +1,6 @@
 #include "Memory.hpp"
 
+////////////////////////////////////////////////////////////////////////////////
 auto Chip8::Memory::read_word_at_address(const Chip8::Word& address) const
 	-> Chip8::Word
 {

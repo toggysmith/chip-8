@@ -8,15 +8,21 @@
 
 namespace Chip8
 {
-	/// @brief Facilitate the storage of register values and their easy access and modification.
+	/**
+	 * @brief Facilitate the storage of register values and their easy access and modification.
+	 */
 	class Registers
 	{
 	    public:
-		/// @brief Get the value of the program counter in binary.
-		/// @return The program counter's value in binary.
+		/**
+		 * @brief Get the value of the program counter in binary.
+		 * @return The program counter's value in binary.
+		 */
 		[[nodiscard]] auto program_counter() const -> Word const&;
 
-		/// @brief Increment the program counter to point to the next word in memory.
+		/**
+		 * @brief Increment the program counter to point to the next word in memory.
+		 */
 		void increment_program_counter_to_next_word();
 
 	    private:

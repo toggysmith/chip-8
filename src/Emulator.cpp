@@ -3,10 +3,12 @@
 #include <chrono>
 #include <thread>
 
+////////////////////////////////////////////////////////////////////////////////
 Chip8::Emulator::Emulator(u64 const instructions_per_second)
     : instructions_per_second_(instructions_per_second)
 {}
 
+////////////////////////////////////////////////////////////////////////////////
 void Chip8::Emulator::execute()
 {
 	f64 const time_until_next_instruction_in_seconds{
@@ -26,6 +28,7 @@ void Chip8::Emulator::execute()
 	}
 }
 
+////////////////////////////////////////////////////////////////////////////////
 auto Chip8::Emulator::fetch_instruction() -> Word
 {
 	Word const& instruction_address{registers_.program_counter()};
